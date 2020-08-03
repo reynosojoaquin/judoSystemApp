@@ -1,10 +1,20 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UsersecretsId>5cd9e6ba-7805-4d63-b802-1c22b6826acb</UsersecretsId>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>c:\Users\Joaquin\Proyectos\judoSystemApp\JudoApp.API\judoapi.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>c:\Users\Joaquin\Proyectos\judoSystemApp\JudoApp.API\judoapi.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.6"/>
     <PackageReference Include="MySql.Data.EntityFrameworkCore" Version="8.0.21"/>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.6"/>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.5.0"/>
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.7.1"/>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.6"/>
   </ItemGroup>
 </Project>

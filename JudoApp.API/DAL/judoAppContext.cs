@@ -27,6 +27,7 @@ namespace JudoApp.API.DAL
         public DbSet<Telefono>Telefonos{get;set;}
         public DbSet<tipoEvento>TiposEvento{get;set;}
         public DbSet<tipoTelefono>tiposTelefono{get;set;}
+        public DbSet<User>Users{get;set;}
 
     }
 }

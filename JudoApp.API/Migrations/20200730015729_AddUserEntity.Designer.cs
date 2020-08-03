@@ -3,14 +3,16 @@ using System;
 using JudoApp.API.DAL;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace JudoApp.API.Migrations
 {
     [DbContext(typeof(judoAppDataContext))]
-    partial class judoAppDataContextModelSnapshot : ModelSnapshot
+    [Migration("20200730015729_AddUserEntity")]
+    partial class AddUserEntity
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -187,10 +189,10 @@ namespace JudoApp.API.Migrations
                         .HasColumnType("int");
 
                     b.Property<byte>("PasswordHash")
-                        .HasColumnType("tinyint");
+                        .HasColumnType("BLOB");
 
                     b.Property<byte>("Passwordkey")
-                        .HasColumnType("tinyint");
+                        .HasColumnType("BLOB");
 
                     b.Property<string>("UserName")
                         .HasColumnType("text");

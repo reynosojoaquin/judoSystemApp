@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JudoApp.API</name>
+    </assembly>
+    <members>
+        <member name="T:JudoApp.API.Controllers.AuthController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:JudoApp.API.Controllers.AuthController.#ctor(JudoApp.API.DAL.IAuthRepository,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="repo"></param>
+            <param name="config"></param>
+        </member>
+        <member name="M:JudoApp.API.Controllers.AuthController.Register(JudoApp.API.Dtos.UserForRegisterDto)">
+            <summary>
+            Metodo que registra un nuevo usuario
+            </summary>
+            <param name="UserForRegisterDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JudoApp.API.Controllers.AuthController.Login(JudoApp.API.Dtos.UserForLoginDto)">
+            <summary>
+            procedimiento para hacer el login de un usuario al sistema
+            </summary>
+            <param name="userForLoginDto"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
