@@ -92,6 +92,11 @@ namespace JudoApp.API
             app.UseRouting();
 
             app.UseAuthorization();
+            app.UseCors(options => 
+                options.WithOrigins("*")
+                .AllowAnyHeader()
+                .AllowAnyMethod());
+
 
             app.UseEndpoints(endpoints =>
             {
