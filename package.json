@@ -1,0 +1,24 @@
+{
+  "name": "judosystemapp",
+  "version": "1.0.0",
+  "description": "sistema de administración para instituciones de judo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reynosojoaquin/judoSystemApp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/reynosojoaquin/judoSystemApp/issues"
+  },
+  "homepage": "https://github.com/reynosojoaquin/judoSystemApp#readme",
+  "dependencies": {
+    "admin-lte": "^3.0.5",
+    "bootstrap": "^3.1.1",
+    "tempusdominus-bootstrap-4": "^5.1.2"
+  }
+}
