@@ -5,6 +5,7 @@
    "version": "0.2.0",
    "configurations": [
 
+
        {
            "name": ".NET Core Launch (web) 2",
            "type": "coreclr",
@@ -56,5 +57,6 @@
             "request": "attach",
             "processId": "${command:pickProcess}"
         }
+        
     ]
 }
