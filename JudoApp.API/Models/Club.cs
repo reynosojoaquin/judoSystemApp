@@ -2,8 +2,10 @@
 namespace JudoApp.API.Models
 {
     using System;
+    using System.ComponentModel.DataAnnotations;
     public class Club
     {
+        [Key]
         public int ClubID { get; set; }
         public DateTime fechaCreacion { get; set; }
         public String nombre { get; set; }

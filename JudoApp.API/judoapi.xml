@@ -30,5 +30,50 @@
             <param name="userForLoginDto"></param>
             <returns></returns>
         </member>
+        <member name="T:JudoApp.API.Controllers.MiembroController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:JudoApp.API.Controllers.MiembroController._unitOfWork">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:JudoApp.API.Controllers.MiembroController.addMember(JudoApp.API.Dtos.miembroForRegisterDto)">
+            <summary>
+            tarea que registra un nuevo miembro del club
+            </summary>
+            <param name="miembro"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JudoApp.API.Controllers.MiembroController.GetMembers">
+            <summary>
+             metodo que devuelve todos los miembros de registrdos
+            </summary>
+            <returns>lista de miembros</returns>
+        </member>
+        <member name="M:JudoApp.API.Controllers.MiembroController.DesableMember(System.String)">
+            <summary>
+            procedimiento para desabilitar un miembro
+            </summary>
+            <param name="miembro"></param>
+            <returns></returns>
+        </member>
+        <member name="M:JudoApp.API.Controllers.MiembroController.UpdateMember(JudoApp.API.Models.Miembro)">
+            <summary>
+            procedimiento para actualizar un miembro
+            </summary>
+            <param name="ID"></param>
+            <param name="miembro"></param>
+            <returns>ID</returns>
+        </member>
+        <member name="M:JudoApp.API.Controllers.MiembroController.GetMemberByID(System.String)">
+            <summary>
+            procedimiento que devuelve un miembro por medido del ID
+            </summary>
+            <param name="id"></param>
+            <returns>Miembro</returns>
+        </member>
     </members>
 </doc>

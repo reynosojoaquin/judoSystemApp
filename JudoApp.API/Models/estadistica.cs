@@ -1,10 +1,12 @@
 namespace JudoApp.API.Models
 {
     using System;
+    using System.ComponentModel.DataAnnotations;
     public class estadistica
     {
-        public int historialDeportivoID { get; set; }
+        [Key]
         public int estadisticaID { get; set; }
+        public int historialDeportivoID { get; set; }
         public int combateID { get; set; }
         public int evantoID { get; set; }
         public DateTime tiempo { get; set; }

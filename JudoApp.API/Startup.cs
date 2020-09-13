@@ -20,6 +20,9 @@ using System.Reflection;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using JudoApp.API.Repositorios;
+using JudoApp.API.interfaces;
+using JudoApp.API.UnitOfWorks;
 
 namespace JudoApp.API
 {
@@ -35,7 +38,8 @@ namespace JudoApp.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<judoAppDataContext>(options => options.UseMySQL(Configuration.GetConnectionString("MySQL")));
+            string connectionString = Configuration.GetConnectionString("MySQLConnection");
+            services.AddDbContext<judoAppDataContext>(options => options.UseMySQL(connectionString));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
             services.AddControllers();
             services.AddCors();
@@ -48,6 +52,13 @@ namespace JudoApp.API
                     ValidateIssuer       = false,
                     ValidateAudience     = false
             });
+             #region repositorios
+             services.AddTransient(typeof(IGenericRepository<>),typeof(GenericRepository<>));   
+             services.AddTransient<IAtletaRepository,AtletaRepository>(); 
+             services.AddTransient<IMiembroRepository,MiembroRepository>(); 
+             services.AddTransient<IUnitOfWork, UnitOfWork>();
+            #endregion 
+ 
 
             services.AddSwaggerGen(c =>
             {

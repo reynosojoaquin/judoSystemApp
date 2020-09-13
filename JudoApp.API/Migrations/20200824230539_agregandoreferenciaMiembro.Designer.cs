@@ -3,14 +3,16 @@ using System;
 using JudoApp.API.DAL;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace JudoApp.API.Migrations
 {
     [DbContext(typeof(judoAppDataContext))]
-    partial class judoAppDataContextModelSnapshot : ModelSnapshot
+    [Migration("20200824230539_agregandoreferenciaMiembro")]
+    partial class agregandoreferenciaMiembro
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

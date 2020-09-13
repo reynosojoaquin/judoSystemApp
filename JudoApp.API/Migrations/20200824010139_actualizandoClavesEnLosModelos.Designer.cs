@@ -3,14 +3,16 @@ using System;
 using JudoApp.API.DAL;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace JudoApp.API.Migrations
 {
     [DbContext(typeof(judoAppDataContext))]
-    partial class judoAppDataContextModelSnapshot : ModelSnapshot
+    [Migration("20200824010139_actualizandoClavesEnLosModelos")]
+    partial class actualizandoClavesEnLosModelos
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -86,9 +88,8 @@ namespace JudoApp.API.Migrations
 
             modelBuilder.Entity("JudoApp.API.Models.Miembro", b =>
                 {
-                    b.Property<int>("miembroID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                    b.Property<string>("miembroID")
+                        .HasColumnType("varchar(767)");
 
                     b.Property<bool>("activo")
                         .HasColumnType("bit");
@@ -135,9 +136,6 @@ namespace JudoApp.API.Migrations
                     b.Property<byte[]>("personaID")
                         .IsRequired()
                         .HasColumnType("varbinary(16)");
-
-                    b.Property<string>("referencia")
-                        .HasColumnType("text");
 
                     b.Property<int?>("sexo")
                         .HasColumnType("int");

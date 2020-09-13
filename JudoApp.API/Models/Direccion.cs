@@ -1,8 +1,10 @@
 namespace JudoApp.API.Models
 {
     using System;
+    using System.ComponentModel.DataAnnotations;
     public class Direccion
     {
+        [Key]
         public int direccionID { get; set; }
         public int    referencia { get; set; }
         public String calle { get; set; }
