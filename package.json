@@ -18,7 +18,7 @@
   "homepage": "https://github.com/reynosojoaquin/judoSystemApp#readme",
   "dependencies": {
     "admin-lte": "^3.0.5",
-    "bootstrap": "^3.1.1",
+    "bootstrap": "^3.4.1",
     "tempusdominus-bootstrap-4": "^5.1.2"
   }
 }
